@@ -1,0 +1,35 @@
+DATA:
+    ROOT: '/data/SSv2'
+    TRAIN_FILE: 'datasets_splits/base2novel_splits/ssv2_splits/fs_base_s1_train.txt'
+    VAL_FILE: 'datasets_splits/base2novel_splits/ssv2_splits/base_val.txt'
+    DATASET: ssv2
+    NUM_FRAMES: 32
+    NUM_CLASSES: 87
+    LABEL_LIST: 'labels/ssv2_174_base_labels.csv'
+    LLM_JSON: './LLM_prompts/hmdb_51_llm_labels.json'
+
+MODEL:
+    ARCH: ViT-B/16
+    DIM: 512
+    
+TRAIN:
+    IS_PRETRAIN: False
+    BATCH_SIZE: 4 # BS 64
+    ACCUMULATION_STEPS: 8
+    EPOCHS: 12
+    LR: 3e-06
+    LR_HEAD: 6e-04
+    LR_ADAPTER: 6e-04
+    DROPOUT_RATE: 0.8
+    REDUCE_DIM: 192
+    VAL: False
+    WARMUP_EPOCHS: 2
+
+TEST:
+    TYPE: "FEWSHOT_VAL"
+    COEF_BB: 0.30
+    COEF_VIS: 0.20
+    COEF_VL: 0.50
+    SCALE: 5.0
+
+SAVE_FREQ: 10  

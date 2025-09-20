@@ -1,0 +1,38 @@
+DATA:
+    ROOT: '/data/k400'
+    TRAIN_FILE: 'datasets_splits/k400_splits/train.txt'
+    VAL_FILE: 'datasets_splits/k400_splits/val.txt'
+    DATASET: kinetics400
+    NUM_FRAMES: 32
+    NUM_CLASSES: 400
+    LABEL_LIST: 'labels/kinetics_400_labels.csv'
+    LLM_JSON: './LLM_prompts/K400/K400_LLM_prompts.json'
+
+MODEL:
+    ARCH: ViT-B/16
+    DIM: 512
+
+TRAIN:
+    IS_PRETRAIN: True
+    BATCH_SIZE: 4 # Effective BS 256
+    ACCUMULATION_STEPS: 32
+    LR: 4e-06 
+    LR_HEAD: 2e-04 
+    LR_ADAPTER: 4e-04 
+    EPOCHS: 10
+    REDUCE_DIM: 192
+    VAL: True
+    WARMUP_EPOCHS: 0
+    DROPOUT_RATE: 0.0
+    WEIGHT_DECAY: 0.001
+
+TEST:
+    ONLY_TEST: False
+    COEF_BB: 0.2
+    COEF_VIS: 0.3
+    COEF_VL: 0.5
+
+AUG:
+   MIXUP: 0.0 
+   CUTMIX: 0.0 
+   MIXUP_SWITCH_PROB: 0.0 
