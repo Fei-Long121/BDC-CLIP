@@ -21,7 +21,7 @@
   <a href="https://icml.cc/media/PosterPDFs/ICML%202025/44508.png?t=1750833676.5123641" style="text-decoration: none;">
     <img src="./assets/Poster-PNG-purple.svg" />
   </a>
-  <a href="link_to_video" style="text-decoration: none;">
+  <a href="https://icml.cc/virtual/2025/poster/44508" style="text-decoration: none;">
     <img src="./assets/Video-YouTube-lightblue.svg" />
   </a>
 </p>
