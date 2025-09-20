@@ -21,7 +21,7 @@
   <a href="https://icml.cc/media/PosterPDFs/ICML%202025/44508.png?t=1750833676.5123641" style="text-decoration: none;">
     <img src="./assets/Poster-PNG-purple.svg" />
   </a>
-  <a href="https://icml.cc/virtual/2025/poster/44508" style="text-decoration: none;">
+  <a href="https://slideslive.com/39042112/bdcclip-brownian-distance-covariance-for-adapting-clip-to-action-recognition" style="text-decoration: none;">
     <img src="./assets/Video-YouTube-lightblue.svg" />
   </a>
 </p>
